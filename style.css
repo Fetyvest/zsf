@@ -133,3 +133,10 @@ body {
         transform: translate(-100%, -100%);
     }
 }
+
+@media(min-width: 1750px) {
+    .btn {
+        width: 185px;
+        height: 60px;
+    }
+}
