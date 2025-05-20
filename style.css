@@ -1,0 +1,135 @@
+@import url(ZeroStyleFet.css);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --font-family: "Nunito Sans", sans-serif;
+}
+
+html,
+body {
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.wrapper {
+    height: 100vh;
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(1.25rem, 0.947rem + 1.942vi, 2.5rem);
+}
+
+.desc {
+    font-size: clamp(0.625rem, 0.473rem + 0.971vi, 1.25rem);
+}
+
+.warning {
+    color: red;
+    text-decoration: underline;
+    font-size: clamp(0.5rem, 0.379rem + 0.777vi, 1rem);
+}
+
+.author {
+    font-size: clamp(0.625rem, 0.473rem + 0.971vi, 1.25rem);
+}
+
+.author-url {
+    color: deepskyblue;
+    transition: all 0.5s;
+    font-size: inherit;
+}
+
+.author-url:hover {
+    color: dodgerblue;
+}
+
+/* .url {} */
+
+.btn {
+    width: calc(5vw + 100px);
+    height: calc((5vw + 100px) / 3.09);
+    font-size: clamp(0.625rem, 0.473rem + 0.971vi, 1.25rem);
+    background-color: deepskyblue;
+    transition: all 0.5s;
+    border-radius: 5px;
+    border: 3px blue solid;
+    box-shadow: 2px 2px 7px gray;
+}
+
+.btn:hover {
+    background-color: dodgerblue;
+}
+
+.block-anim1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc((100vw - 1280px) / 2);
+    height: calc((100vw - 1280px) / 2);
+    background-color: #ececec;
+    animation: block-anim1 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.block-anim2 {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: calc((100vw - 1280px) / 2);
+    height: calc((100vw - 1280px) / 2);
+    background-color: #ececec;
+    transform: translate(-100%, -100%);
+    animation: block-anim2 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes block-anim1 {
+    0% {
+        top: 0;
+        transform: translate(0, 0);
+    }
+
+    50% {
+        top: 100%;
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        top: 0;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes block-anim2 {
+    0% {
+        top: 100%;
+        transform: translate(-100%, -100%);
+    }
+
+    50% {
+        top: 0;
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        top: 100%;
+        transform: translate(-100%, -100%);
+    }
+}
